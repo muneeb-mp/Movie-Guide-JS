@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+:root {
+    --mainBackground: radial-gradient(circle 860px at 11.8% 33.5%, rgba(240, 30, 92, 1) 0%, rgba(244, 49, 74, 1) 30.5%, rgba(249, 75, 37, 1) 56.1%, rgba(250, 88, 19, 1) 75.6%, rgba(253, 102, 2, 1) 100.2%);
+    --containerBackground: linear-gradient(112.1deg, rgba(32, 38, 57, 1) 11.4%, rgba(63, 76, 119, 1) 70.2%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: var(--mainBackground);
+}
+
+.container {
+    font-size: 16px;
+    width: 90vw;
+    max-width: 41em;
+    padding: 1em 1em;
+    background-image: var(--containerBackground);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.8em;
+    box-shadow: 1.3em 2em 3em rgba(0, 0, 0, 0.2);
+}
+
+.pageTitle {
+    color: crimson;
+    padding-bottom: 0.3em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.2em;
+}
+
+.search-container input,
+.search-container button {
+    font-size: 0.9em;
+    border-radius: 0.6em;
+    outline: none;
+}
+
+.search-container input {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid whitesmoke;
+    padding: 0.6em 0.9em;
+    color: azure;
+}
+
+.search-container button {
+    background-image: var(--mainBackground);
+    color: azure;
+    cursor: pointer;
+}
+
+#notFound {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+#notFound img{
+    margin: 0.5em 0em;
+    width: 10em;
+}
+
+#notFound h2{
+    font-weight: 500;
+    color: rgb(172, 186, 186);
+}
+
+.info {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    color: rgb(172, 186, 186);
+    padding: 1em 0em;
+    /* align-items: center; */
+}
+
+.poster {
+    width: 100%;
+}
+
+.details {
+    padding-left: 1em;
+}
+
+.info .details h2,
+h4 {
+    font-weight: 500;
+}
+
+.info .details #title {
+    font-size: 2em;
+    line-height: 1.1em;
+    padding-bottom: 0.4em;
+}
+
+.info .details .release {
+    padding-top: 0.4em;
+}
+
+.info .details .directed {
+    padding-top: 0.9em;
+}
+
+.info .details .rating {
+    padding-top: 0.9em;
+}
+
+.genre,
+.plot {
+    padding: 0.4em 0em;
+    color: rgb(172, 186, 186);
+}
+
+.plot .desc {
+    color: azure;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .container{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        font-size: 12px;
+        max-height: 98vh;
+    }
+    .info{
+        grid-template-columns: 1fr;
+    }
+    .poster{
+        margin: auto;
+        width: auto;
+        max-height: 15em;
+    }
+    .details {
+        padding-left: 0em;
+    }
+
+    .info .details .release {
+        padding-top: 0.4em;
+    }
+    
+    .info .details .directed {
+        padding-top: 0.6em;
+    }
+    
+    .info .details .rating {
+        padding-top: 0.6em;
+    }
+}
