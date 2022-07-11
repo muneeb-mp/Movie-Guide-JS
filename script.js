@@ -61,4 +61,4 @@ let getMovie = () => {
 }
 
 search.addEventListener('click', getMovie);
-window.addEventListener('load', getMovie);
+// window.addEventListener('load', getMovie);
